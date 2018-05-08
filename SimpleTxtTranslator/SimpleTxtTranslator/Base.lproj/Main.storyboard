@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleTxtTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ieD-so-quh">
+                                <rect key="frame" x="0.0" y="441.5" width="375" height="215.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text to translate" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-3O-X3N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="205.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XLX-zy-Rov">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5e-9i-dTP">
+                                        <rect key="frame" x="0.0" y="0.0" width="283.5" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="T4r-3G-rx5"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="UZ8-Fp-GFd"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5x-C0-uJ6">
+                                        <rect key="frame" x="283.5" y="93" width="91.5" height="30"/>
+                                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="    Translate      ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="translateButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEJ-uf-bWp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ieD-so-quh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5DT-l2-BJC"/>
+                            <constraint firstItem="ieD-so-quh" firstAttribute="top" secondItem="XLX-zy-Rov" secondAttribute="bottom" id="Age-2C-BUY"/>
+                            <constraint firstItem="wSC-3O-X3N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jgb-ch-D2A"/>
+                            <constraint firstItem="wSC-3O-X3N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RAr-6S-oZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wSC-3O-X3N" secondAttribute="trailing" id="SQg-IN-qev"/>
+                            <constraint firstItem="XLX-zy-Rov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U9L-GD-9Ya"/>
+                            <constraint firstAttribute="trailing" secondItem="XLX-zy-Rov" secondAttribute="trailing" id="aGF-NH-HEz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ieD-so-quh" secondAttribute="bottom" constant="10" id="h3i-H6-iZa"/>
+                            <constraint firstItem="XLX-zy-Rov" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w0V-zm-A0j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieD-so-quh" secondAttribute="trailing" id="x4D-th-Mhe"/>
+                            <constraint firstItem="XLX-zy-Rov" firstAttribute="top" secondItem="wSC-3O-X3N" secondAttribute="bottom" id="x5n-K7-Qhp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="langPickerView" destination="i5e-9i-dTP" id="ZHV-ZG-H7s"/>
+                        <outlet property="sourceTextField" destination="wSC-3O-X3N" id="ThF-fN-Pck"/>
+                        <outlet property="translatedField" destination="ieD-so-quh" id="yMv-FG-4RL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
