@@ -14,6 +14,7 @@
 		8684CCFF20A2058B00AF7001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8684CCFE20A2058B00AF7001 /* Assets.xcassets */; };
 		8684CD0220A2058B00AF7001 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8684CD0020A2058B00AF7001 /* LaunchScreen.storyboard */; };
 		8684CD0D20A2058B00AF7001 /* SimpleTxtTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8684CD0C20A2058B00AF7001 /* SimpleTxtTranslatorTests.swift */; };
+		8684CD1820A2076800AF7001 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8684CD1720A2076800AF7001 /* Languages.swift */; };
 		CE4250D41FA98CAF18F53011 /* Pods_SimpleTxtTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B40BFF9FF908B95CBB9CF79 /* Pods_SimpleTxtTranslator.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		8684CD0820A2058B00AF7001 /* SimpleTxtTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTxtTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8684CD0C20A2058B00AF7001 /* SimpleTxtTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTxtTranslatorTests.swift; sourceTree = "<group>"; };
 		8684CD0E20A2058B00AF7001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8684CD1720A2076800AF7001 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		B64DC05FBB500A5662451F0E /* Pods-SimpleTxtTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTxtTranslator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTxtTranslator/Pods-SimpleTxtTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		C04897827728569DB87C0A64 /* Pods-SimpleTxtTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTxtTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTxtTranslatorTests/Pods-SimpleTxtTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BF68B1C8B6B11AFFCF47AE /* Pods-SimpleTxtTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTxtTranslatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTxtTranslatorTests/Pods-SimpleTxtTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		8684CCF620A2058B00AF7001 /* SimpleTxtTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				8684CD1920A2076C00AF7001 /* Source */,
 				8684CCF720A2058B00AF7001 /* AppDelegate.swift */,
 				8684CCF920A2058B00AF7001 /* ViewController.swift */,
 				8684CCFB20A2058B00AF7001 /* Main.storyboard */,
@@ -106,6 +109,14 @@
 				8684CD0E20A2058B00AF7001 /* Info.plist */,
 			);
 			path = SimpleTxtTranslatorTests;
+			sourceTree = "<group>";
+		};
+		8684CD1920A2076C00AF7001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8684CD1720A2076800AF7001 /* Languages.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		ABBBA3B522EBC25EE420DCD4 /* Frameworks */ = {
@@ -293,6 +304,7 @@
 			files = (
 				8684CCFA20A2058B00AF7001 /* ViewController.swift in Sources */,
 				8684CCF820A2058B00AF7001 /* AppDelegate.swift in Sources */,
+				8684CD1820A2076800AF7001 /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
