@@ -9,9 +9,9 @@
 import UIKit
 
 public extension String{
-    public func translate(from sourceLang: Languages = .Automatic, to targetLang: Languages, onCompletion: @escaping (String)->()){
+    public func translate(from sourceLang: Language = .Automatic, to targetLang: Language, onCompletion: @escaping (String)->()){
         let sourceText = addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-        let url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang.rawValue)&tl=\(targetLang.rawValue)&dt=t&q=\(sourceText ?? "")"
+        let url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang.code)&tl=\(targetLang.code)&dt=t&q=\(sourceText ?? "")"
         
         
         let request = NSMutableURLRequest(url: URL.init(string: url)!)
